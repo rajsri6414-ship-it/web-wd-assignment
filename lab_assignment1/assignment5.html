@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { text-align: center; }
+        form { margin: 30px; }
+        .form-row { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form>
+        <div class="form-row">
+            Full Name: <input type="text" name="fullname" placeholder="Enter your full name">
+        </div>
+        <div class="form-row">
+            Email: <input type="email" name="email" placeholder="Enter valid email address">
+        </div>
+        <div class="form-row">
+            Password: <input type="password" name="password" placeholder="Enter password">
+        </div>
+        <div class="form-row">
+            Gender:
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+        </div>
+        <div class="form-row">
+            Course:
+            <select name="course">
+                <option>-- Select Course --</option>
+                <option>B.Tech</option>
+                <option>B.Sc</option>
+                <option>B.A</option>
+            </select>
+        </div>
+        <div class="form-row">
+            Contact No: <input type="text" name="contact" placeholder="Enter phone number">
+        </div>
+        <div class="form-row">
+            Address: <br>
+            <textarea name="address" rows="3" cols="30" placeholder="Enter your address"></textarea>
+        </div>
+        <div class="form-row">
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear">
+        </div>
+    </form>
+    <div style="text-align:center;margin-top:30px;">
+    </div>
+</body>
+</html>

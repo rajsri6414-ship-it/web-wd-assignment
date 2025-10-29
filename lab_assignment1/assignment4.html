@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Room Booking Form</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        form {
+            border: 2px solid black;
+            display: inline-block;
+            margin-top: 40px;
+            padding: 30px 35px;
+        }
+        .form-row {
+            margin: 8px 0;
+            text-align: left;
+        }
+        input, select, textarea {
+            width: 200px;
+            padding: 3px;
+            margin-left: 10px;
+        }
+        textarea {
+            width: 350px;
+            height: 60px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Hotel Room Booking Form</h1>
+        <div class="form-row">
+            Full Name: <input type="text" name="fullname">
+        </div>
+        <div class="form-row">
+            Email: <input type="email" name="email">
+        </div>
+        <div class="form-row">
+            Phone: <input type="text" name="phone">
+        </div>
+        <div class="form-row">
+            Check-in Date: <input type="date" name="checkin">
+        </div>
+        <div class="form-row">
+            Check-out Date: <input type="date" name="checkout">
+        </div>
+        <div class="form-row">
+            Room Type: 
+            <select name="roomtype">
+                <option>Single Room</option>
+                <option>Double Room</option>
+                <option>Suite</option>
+            </select>
+        </div>
+        <div class="form-row">
+            Number of Guests: <input type="number" name="guests" min="1">
+        </div>
+        <div class="form-row">
+            Special Requests:<br>
+            <textarea name="requests"></textarea>
+        </div>
+        <div class="form-row" style="text-align:center;">
+            <input type="submit" value="Book Now">
+            <input type="reset" value="Reset Form">
+        </div>
+    </form>
+</body>
+</html>
