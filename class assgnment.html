@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxModel 2</title>
+    <style>
+        hmtl,*{
+            box-sizing: border-box;
+        }
+        #main{
+            height: 304px;
+            width: 900px;
+            background-color:aqua(15, 72, 215);
+            margin: 0 auto;
+            border: 5px black dotted;
+            display: flex;
+        }
+        #left{
+            height: 300px;
+            width: 300px;
+
+            background-color: rgb(255, 255, 255);
+        }
+        #right{
+            height: 300px;
+            width: 580px;
+            background-color: rgb(15, 72, 215);
+            margin-left: 20px;
+        }
+        .rightBox{
+            height: 140px;
+            width: 580px;
+            background-color: rgb(248, 186, 194);
+        }
+        .rightBox:nth-child(2){
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="left">
+
+        </div>
+        <div id="right">
+            <div class="rightBox">
+
+            </div>
+            <div class="rightBox">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
