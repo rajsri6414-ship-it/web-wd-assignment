@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Box Layout</title>
+  <style>
+    :root{
+      --border: #f33f08;
+      --orange: #f0a040;
+      --purple: #54f833;
+      --light: #e01642;
+      --blue: #17a4d9;
+    }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#f7f7f7;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .wrap{
+      width:360px;                
+      border:8px solid var(--border);
+      box-sizing:border-box;
+      display:grid;
+      grid-template-columns: 1fr 120px; 
+      grid-template-rows: 60px 40px 120px 120px 50px; 
+      gap:12px;
+      padding:12px;
+      background:white;
+    }
+
+    header{
+      grid-column: 1 / -1;
+      background:var(--orange);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      border-radius:6px;
+    }
+
+    nav{
+      grid-column: 1 / -1;
+      background:var(--purple);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:600;
+      border-radius:6px;
+    }
+
+    .section{
+      grid-column: 1 / 2;
+      background:var(--light);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:6px;
+      box-shadow: inset 0 0 0 3px rgba(18,177,168,0.06);
+    }
+
+    aside{
+      grid-column: 2 / 3;
+      grid-row: 3 / 5; 
+      background:var(--orange);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:6px;
+    }
+
+    .article{
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      background:var(--blue);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      border-radius:6px;
+      overflow:hidden;
+    }
+
+    /* diagonal decoration like image */
+    .article::after{
+      content:"";
+      position:absolute;
+      right:-40px;
+      top:30px;
+      width:120px;
+      height:120px;
+      background:rgba(255,255,255,0.12);
+      transform: rotate(-35deg);
+      border-top-left-radius:8px;
+    }
+
+    footer{
+      grid-column: 1 / -1;
+      background:var(--purple);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:6px;
+      font-weight:600;
+    }
+
+    /* small responsive tweak */
+    @media (max-width:420px){
+      .wrap{ width: 92%; grid-template-columns: 1fr 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>&lt;header&gt;</header>
+    <nav>&lt;nav&gt;</nav>
+
+    <div class="section">&lt;section&gt;</div>
+    <aside>&lt;aside&gt;</aside>
+
+    <article class="article">&lt;article&gt;</article>
+
+    <footer>&lt;footer&gt;</footer>
+  </div>
+</body>
+</html>
