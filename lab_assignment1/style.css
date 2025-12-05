@@ -1,0 +1,119 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdd835; /* A bright, visible color */
+    padding: 10px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+/* Action/Cart Styling */
+.actions a {
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.actions a:hover {
+    background-color: #333;
+}
+
+/* Hero Section (Basic content styling) */
+.hero {
+    padding: 50px 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Responsive Design (Media Queries) */
+/* ---------------------------------------------------------------------- */
+
+/* Hide menu on smaller screens (Mobile-First approach) */
+@media (max-width: 767px) {
+    /* Hide the navigation menu on small screens */
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Tablet (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Adjustments for tablet size */
+    header {
+        padding: 10px 20px;
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
+    .nav-links a {
+        font-size: 0.95rem; /* Slightly smaller text */
+    }
+}
+
+/* Large Screens (Above 1024px) */
+@media (min-width: 1025px) {
+    /* Ensure the font sizes remain standard for large desktops */
+    .logo {
+        font-size: 1.5rem;
+    }
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
