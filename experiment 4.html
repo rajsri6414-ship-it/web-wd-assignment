@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Calculator RAJ Srivastava 2025b15410144</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e6ecf0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 80px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 85%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 6px;
+            background: #007BFF;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        h2 {
+            margin: 8px 0;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Result Calculator</h1>
+
+        <h3>Enter Number of Subjects</h3>
+
+        <input type="number" id="subjects" placeholder="Enter subjects">
+
+        <button onclick="getSubjects()">Enter</button>
+        <button onclick="getResult()">Result</button>
+        <h2 id="total">Total:</h2>
+        <h2 id="avg">Average:</h2>
+        <h2 id="grd">Grade:</h2>
+    </div>
+    <script>
+        let totalEl = document.getElementById("total")
+        let avgEl = document.getElementById("avg")
+        let grdEl = document.getElementById("grd")
+        let num = 0
+        let sum = 0
+        function getSubjects() {
+            sum = 0
+            num = document.getElementById("subjects").value
+            for (let i = 0; i < num; i++) {
+                let marks = Number(prompt("Enter subject's Score"))
+                sum += marks
+            }
+        }
+        function getResult() {
+            let avg = sum / num
+            let grade = ""
+            if (avg >= 90) {
+                grade = "A"
+            }
+            else if (avg >= 75) {
+                grade = "B"
+            }
+            else if (avg >= 60) {
+                grade = "C"
+            }
+            else {
+                grade = "D"
+            }
+            totalEl.textContent = "Total: " + sum
+            avgEl.textContent = "Average: " + avg.toFixed(2)
+            grdEl.textContent = "Grade: " + grade
+        }
+    </script>
+</body>
+
+</html>
