@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+</head>
+
+<body>
+    <div class="box" id="registration-box"
+        style="max-width: 400px; margin: 40px auto; padding: 24px; border: 2px solid #333; border-radius: 12px; background: #fafafa;">
+        <h1 style="margin-top: 0; text-align: center;">Registration Form</h1>
+        <form id="registration-form">
+            <div>
+                <label for="username" style="display: block; margin-bottom: 6px; font-weight: 600;">Username:</label>
+                <input type="text" id="username" name="username" required
+                    style="width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+
+                <label for="email" style="display: block; margin-bottom: 6px; font-weight: 600;">Email:</label>
+                <input type="email" id="email" name="email" required
+                    style="width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+
+                <label for="password" style="display: block; margin-bottom: 6px; font-weight: 600;">Password:</label>
+                <input type="password" id="password" name="password" required
+                    style="width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+
+                <input type="submit" value="Register"
+                    style="width: 100%; padding: 10px; border: none; border-radius: 6px; background: #4a90e2; color: #fff; font-weight: 700; cursor: pointer;">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const marks = ['Maths', 'Science', 'English'].map(s => {
+            const v = Number(prompt(`Enter ${s} marks (0-100):`));
+            return isNaN(v) ? NaN : v;
+        });
+        if (marks.some(m => isNaN(m) || m < 0 || m > 100)) {
+            alert('Please enter valid marks (0-100) for all subjects.');
+        } else {
+            const total = marks.reduce((a, b) => a + b, 0);
+            alert(`Total: ${total}/300\nPercentage: ${(total / 3).toFixed(2)}%`);
+        }
+    </script>
+</body>
+
+</html>
